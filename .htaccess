@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Redirect /dashboard, /request, /records to index.php?page=...
+RewriteRule ^dashboard/?$ index.php?page=dashboard [L,QSA]
+RewriteRule ^request/?$ index.php?page=request [L,QSA]
+RewriteRule ^records/?$ index.php?page=records [L,QSA]
+
+# Optional: redirect root to dashboard
+RewriteRule ^$ index.php?page=dashboard [L,QSA]
